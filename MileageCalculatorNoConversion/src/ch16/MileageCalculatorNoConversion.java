@@ -63,6 +63,8 @@ public class MileageCalculatorNoConversion extends Application {
         tfResult.setMaxWidth(txtWidth);
         tfResult.setEditable(false);
         
+        this.toggleConvBox.getSelectionModel().selectedItemProperty().addListener((e)->changeLabels());
+        
         // create a main grid pane to hold items
         mainPane.setPadding(new Insets(10.0));
         mainPane.setHgap(txtWidth/2.0);
@@ -177,14 +179,14 @@ public class MileageCalculatorNoConversion extends Application {
         
         
         //TODO:
-        /*    if (rbKPL.isSelected()) {
+           if (this.getUnits()==this.altMileage) {
         	// liters / 100KM
         	result = (distance != 0) ? capacity/(distance/100.0) : 0;
         } else {
         	// MPG
         	result = (capacity != 0) ? distance/capacity : 0;       	
         }
-    	*/
+    	
         
         
 	    // update calculation fields with currency formatting
