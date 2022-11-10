@@ -176,15 +176,15 @@ public class MileageCalculatorNoConversion extends Application {
         // check for type of calculation
         
         
-        //TODO:
-        /*    if (rbKPL.isSelected()) {
+        
+           if (getUnits()==defaultMileage) {
         	// liters / 100KM
         	result = (distance != 0) ? capacity/(distance/100.0) : 0;
         } else {
         	// MPG
         	result = (capacity != 0) ? distance/capacity : 0;       	
         }
-    	*/
+    	
         
         
 	    // update calculation fields with currency formatting
