@@ -56,6 +56,8 @@ public class MileageCalculatorNoConversion extends Application {
     	// set toggle group for RadioButtons
 
     	toggleConvBox.getItems().addAll(defaultMileage,altMileage);
+	toggleConvBox.getSelectionModel().selectedItemProperty().addListener((e)->changeLabels());
+
     	toggleConvBox.getSelectionModel().select(0);
         // set preferences for UI components
         tfDistance.setMaxWidth(txtWidth);
